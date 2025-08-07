@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   child.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slamhaou <slamhaou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: naessgui <naessgui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 13:06:30 by slamhaou          #+#    #+#             */
-/*   Updated: 2025/08/06 15:13:41 by slamhaou         ###   ########.fr       */
+/*   Updated: 2025/08/07 16:38:03 by naessgui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ int	*arr_id_pross(t_var *var, t_cmd *list)
 		return (NULL);
 	var->num_cmd = counter;
 	arr_id = malloc(sizeof(pid_t) * counter);
+	counter = 0;
+	while(counter <= var->num_cmd)
+	{
+		arr_id[counter++] = 0;
+	}
 	return (arr_id);
 }
 
